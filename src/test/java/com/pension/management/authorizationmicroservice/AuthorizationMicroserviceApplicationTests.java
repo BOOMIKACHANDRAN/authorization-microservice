@@ -31,7 +31,7 @@ class AuthorizationMicroserviceApplicationTests {
 	
 	@Test
 	public void testLoadUserByUsernamePresent() {
-		UserDetails userDetails = usersDetailsService.loadUserByUsername("boomika");
+		UserDetails userDetails = usersDetailsService.loadUserByUsername("Boomika");
 		assertNotNull(userDetails);
 	}
 	
@@ -49,7 +49,7 @@ class AuthorizationMicroserviceApplicationTests {
 	
 	@Test
 	public void testGenerateToken() {
-		UserDetails userDetails = usersDetailsService.loadUserByUsername("boomika");
+		UserDetails userDetails = usersDetailsService.loadUserByUsername("Boomika");
 		String token = jwtUtil.generateToken(userDetails);
 		assertNotNull(token);
 	}
