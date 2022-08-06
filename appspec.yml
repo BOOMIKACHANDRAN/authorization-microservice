@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/boomika-authorization-microservice:1"
+        LoadBalancerInfo:
+          ContainerName: "boomika-authorization-microservice"
+          ContainerPort: "8010"
+        PlatformVersion: "LATEST"
